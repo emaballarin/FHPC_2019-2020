@@ -103,7 +103,7 @@ void func3(unsigned int S)
 
 
 
-
+// The (in)famous **argv trick -> an array-pointer to strings (that are pointed to by arrays) 
 int main(int argc, char **argv)
 {
   unsigned int  S;
@@ -113,9 +113,11 @@ int main(int argc, char **argv)
       
 
   // get the memory to be allocated in KB
+  // It should be chacked that the input is a (double) float. Otherwise -> problems!
   if(argc > 1)
     
-    S = (unsigned int)((int)(atof(*(argv+1)) * 1024));
+    // Fix:
+    S = (unsigned int)(atoi(*(argv+1)) * 1024);
   
   else
     {
