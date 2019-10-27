@@ -1,11 +1,9 @@
 name: ammasc
 
 channels:
-  # Keep in this order!
   - intel
   - defaults
   - conda-forge
-  - plotly
 
 dependencies:
   - asn1crypto
@@ -95,7 +93,4 @@ dependencies:
   - xz
   - yaml
   - zlib
-
-  - pip:
-      # Keep in this order!
-      - py
+  
