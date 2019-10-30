@@ -2,7 +2,7 @@
 
 ### Due date : 04.11.2019 @ 23:59
 
-***version 1.1 ( released at 13.00 28.11.2019)***
+***version 1.1 (released at 13.00 28.11.2019), and subsequent edits***
 
 #### Submission policy:  by email to [cozzini@iom.cnr.it](mailto:cozzini@iom.cnr.it) as zip file named as `Surname.FirstName.zip`
 
@@ -43,12 +43,16 @@ Directory codes should includes all the programs we requested to write. The prog
   - Write here the  final result  obtained: 
 
   
-  |        | Your model | CPU  | Frequency | number  of core | Peak performance |
-  | ------ | ---------- | ---- | --------- | --------------- | ---------------- |
-  | Laptop |            |      |           |                 |                  |
+  |        |     Your model      |         CPU          | Frequency | number  of core | F64 ops/s | Peak performance |
+  | :----: | :-----------------: | :------------------: | :-------: | :-------------: | :-------: | :--------------: |
+  | Laptop | Dell Precision 7510 | Intel Core i7-6820HQ |  2.70GHz  |        4        |    16     |  172.8 GFLOPS/s  |
+  
+  $Peak\ performance\ [FLOPS/s] = Number\ of \ cores \times Frequency\ of\ a\ cores\ [Hz] \times Number\ of\ floating\ operations\ per\ second\ (FP64) = $
+  
+  $= 4 \times (2.7 \times 10^9) \times 16 = 172.8 \times10^9 FLOPS/s$
+  
+  
 
-
- 
 
 - Compute sustained Peak performance for your  cell-phone
   
@@ -61,9 +65,13 @@ Directory codes should includes all the programs we requested to write. The prog
   - Extra Bonus:  Identify the CPU and calculate the Peak performance of the CPU  
   
   
-  |            | Your model | sustained performance | size of matrix | Peak performance | memory |
-  | ---------- | ---------- | --------------------- | -------------- | ---------------- | ------ |
-  | SmartPhone |            |                       |                |                  |        |
+  |            |        Your model        | sustained performance | size of matrix | Peak performance | memory |
+  | :--------: | :----------------------: | :-------------------: | :------------: | :--------------: | :----: |
+  | SmartPhone | Galaxy Tab A 10.1 (2016) |                       |   2000/1700    |  25.6 GFLOPS/s   |  2GB   |
+  
+  $Peak\ performance\ [FLOPS/s] = Number\ of \ cores \times Frequency\ of\ a\ cores\ [Hz] \times Number\ of\ floating\ operations\ per\ second\ (FP64) = $
+  
+  $= 8 \times (1.6 \times 10^9) \times 2 = 25.6 \times10^9 FLOPS/s$
 
 
 
@@ -73,10 +81,10 @@ Directory codes should includes all the programs we requested to write. The prog
 
     
 
-  |            | Your model | performance | Top500 year | number 1 HPC system | number of processors (TOP500) |
-  | ---------- | ---------- | ----------- | ----------- | ------------------- | ----------------------------- |
-  | SmartPhone |            |             |             |                     |                               |
-  | Laptop     |            |             |             |                     |                               |
+  |            |        Your model        |  performance   | Top500 year | number 1 HPC system | number of processors (TOP500) |
+  | :--------: | :----------------------: | :------------: | :---------: | :-----------------: | :---------------------------: |
+  | SmartPhone | Galaxy Tab A 10.1 (2016) | 25.6 GFLOPS/s  |             |                     |                               |
+  |   Laptop   |   Dell Precision 7510    | 172.8 GFLOPS/s |             |                     |                               |
 
 
 ​    
@@ -99,7 +107,7 @@ Directory codes should includes all the programs we requested to write. The prog
 
     - Slaves send partial sum  $\rightarrow$   $(P-1)T_{comm}$
 
-    - Master performs  one final sum ===>  $(P-1) \times $T_{comp}$
+    - Master performs  one final sum $\rightarrow$  $(P-1) \times T_{comp}$
 
       the final model:    $T_p=   T_{comp}\times (P -1 + n/P)  + T_{read} + 2(P-1)\times T_{comm}  $
 
@@ -121,7 +129,7 @@ Directory codes should includes all the programs we requested to write. The prog
 
   - Can you try to modify the algorithm sketched above to increase its scalability ? 
 
-    (hints: try to think a  better communication  algorithm) 
+    (hints: try to think a  better communication  algorithm)  `NOTE TO SELF: Batched reduce`
 
   
 
@@ -232,3 +240,4 @@ In this final section you are ruquested to run and measure strong scalability of
 ## Extra: Section 6: naive vs proper `MPI_REDUCE`
 
 `// TODO`
+

@@ -1,3 +1,4 @@
 #!/bin/sh
 name=$(basename $1 .c)
-gcc -ggdb3 -fno-omit-frame-pointer -o $name $1
+#gcc -ggdb3 -fno-omit-frame-pointer -o $name $1
+gcc -g -ggdb3 -g3 -gdwarf-4 -fno-omit-frame-pointer -o $name $1
