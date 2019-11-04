@@ -231,7 +231,7 @@ In this final section you are ruquested to run and measure strong scalability of
 
         
 
-## Extra: Section 5:  Implement 
+## Extra: Section 5:  Implement
 
 `// TODO`
 
