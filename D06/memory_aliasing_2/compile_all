@@ -2,7 +2,7 @@
 
 declare -a compiler=("gcc" "icc" "pgcc")
 declare -a cstd=("-std=c11" "-std=c11" "-c11")
-declare -a optimization=("-O3 -march=native" "-O3 -fast" "-O4 -fast")
+declare -a optimization=("-Ofast -march=native -flto -fuse-linker-plugin" "-Ofast -xHost -ipo -fast" "-O4 -fast")
 
 length=${#compiler[@]}
 
