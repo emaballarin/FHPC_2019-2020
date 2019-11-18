@@ -15,8 +15,8 @@ papi_myevent papi_events[PAPI_EVENTS_NUM]   = {\
   {PAPI_TOT_CYC, -1, "TOT CYC"},
   {PAPI_LD_INS,  -1, "TOT LD INS"},
   {PAPI_L1_DCM,   2, "L1 Dm"},
-  {PAPI_L2_DCM,   2, "L2 Dm",
-  {PAPI_TLB_DM,   2, "TLB Dm",
+  {PAPI_L2_DCM,   2, "L2 Dm"},
+  {PAPI_TLB_DM,   2, "TLB Dm"},
   {PAPI_STL_CCY,  1, "CYC no ins completed"}};
 
 int       papi_SetEvents_num                = 0;                // how many events have been set 
