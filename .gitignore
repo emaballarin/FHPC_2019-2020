@@ -49,6 +49,7 @@ compile_commands.json
 # Special files and folders
 gitignored-*
 **/gitignored-*/
+/TODO
 
 # Other local/temporary files
 /*build*
